@@ -1,35 +1,64 @@
-import Link from "next/link";
+import Image from "next/image";
+import { InstagramIcon, Logo, MailIcon, PhoneIcon } from "~/lib/icons";
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-          Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-        </h1>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/usage/first-steps"
+    <main className="grid place-items-center px-4 text-center">
+      <div className="px-4 pb-4 pt-6 md:w-[50ch] md:pt-12">
+        <Logo />
+      </div>
+      <h1 className="hidden">Marije Smak Photography</h1>
+      <div className="mb-6 mt-8 rounded-full px-16">
+        <Image
+          src={"/profiel.jpg"}
+          alt="Foto van Marije Smak"
+          width={340}
+          height={340}
+        ></Image>
+      </div>
+      <div className="max-w-[50ch]">
+        <p className="mb-5">
+          Ik ben Marije, een gepassioneerde fotografe van 28 jaar. Mijn reis in
+          de wereld van fotografie begon met een vierjarige opleiding in (audio)
+          visuele vormgeving, aangevuld met diverse cursussen en trainingen in
+          de (technische) benadering van fotografie en het editen van foto's en
+          video's. Daarnaast heb ik ook nog een aantal jaren in de tv wereld
+          gewerkt, waar ik bezig ben geweest met het maken van beeld.
+        </p>
+        <p>
+          Met een scherp oog voor detail en een enorme passie voor het
+          vastleggen van bijzondere momenten in het leven, sta ik met veel
+          energie klaar om speciale momenten vast te leggen.
+        </p>
+        <h3 className="mb-2 mt-6">Je kunt mij inzetten voor:</h3>
+        <ul className="mx-auto mb-8 max-w-[30ch] list-inside list-disc">
+          <li>Bruiloften</li>
+          <li>Branding shoots</li>
+          <li>Commerciële shoots</li>
+          <li>Overige verzoeken zijn altijd bespreekbaar</li>
+        </ul>
+        <h2>Neem contact op:</h2>
+        <div className="mx-auto my-6 flex w-max gap-4">
+          <a
+            href="https://www.instagram.com/marijesmak.photography"
             target="_blank"
           >
-            <h3 className="text-2xl font-bold">First Steps →</h3>
-            <div className="text-lg">
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
-            </div>
-          </Link>
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/introduction"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">Documentation →</h3>
-            <div className="text-lg">
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
-            </div>
-          </Link>
+            <InstagramIcon />
+          </a>
+          <a href="tel:+31629247721">
+            <PhoneIcon />
+          </a>
+          <a href="mailto:marije.smak@gmail.com">
+            <MailIcon />
+          </a>
+        </div>
+        <div className="mb-6 mt-12 font-mono text-sm">
+          {`Website wordt gebouwd door `}
+          <span className="underline">
+            <a href="https://www.linkedin.com/in/max-strootmann">
+              Max Strootmann
+            </a>
+          </span>
         </div>
       </div>
     </main>
