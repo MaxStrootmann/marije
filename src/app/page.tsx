@@ -15,6 +15,7 @@ export default function HomePage() {
           width={340}
           height={510}
           style={{ borderRadius: "50%" }}
+          priority={true}
         ></Image>
       </div>
       <div className="max-w-[50ch]">
