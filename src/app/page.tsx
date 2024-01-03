@@ -13,7 +13,7 @@ export default function HomePage() {
           src={"/profiel.jpg"}
           alt="Foto van Marije Smak"
           width={340}
-          height={340}
+          height={510}
           style={{ borderRadius: "50%" }}
         ></Image>
       </div>
